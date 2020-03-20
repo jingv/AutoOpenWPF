@@ -1,0 +1,6 @@
+PLUSManager.stp~C:\Users\asus\Desktop\NEW DEMO\SourceCode\PLUS Application\PLUS Manager\PLUSManager.stp
+PLUSserver.stp~C:\Users\asus\Desktop\NEW DEMO\SourceCode\PLUS Application\PLUS Server1\PLUSserver.stp
+PLUSserver.stp~C:\Users\asus\Desktop\NEW DEMO\SourceCode\PLUS Application\PLUS Server2\PLUSserver.stp
+SEMI.OUI.Launcher.exe~C:\Users\asus\Desktop\NEW DEMO\SourceCode\EAP OUI\SEMI OUI Solution_PLUS\SEMI.OUI.Launcher\bin\Debug\SEMI.OUI.Launcher.exe
+EAP.stp~C:\Users\asus\Desktop\NEW DEMO\SourceCode\EAP Application\Semilab_FAaST230\EAP.stp
+EqpSimulator.stp~C:\Users\asus\Desktop\NEW DEMO\SourceCode\EQP Simulator\SemiLab_FAaST230\EqpSimulator.stp

@@ -1,0 +1,40 @@
+﻿<Window x:Name="AutoOpen" x:Class="AutoOpenWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutoOpenWPF"
+        mc:Ignorable="d"
+        Title="AutoOpen" Height="450" Width="800" Icon="icon.png">
+    <Grid HorizontalAlignment="Right" Width="800">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="800*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <!--右侧元素-->
+        <Button x:Name="addBtn" Content="添加文件" Margin="510,10,40,0" Height="30" VerticalAlignment="Top" Click="addBtn_Click"/>
+        <Button x:Name="removeBtn" Content="移除文件" Margin="510,50,40,0" Height="30" Click="removeBtn_Click" VerticalAlignment="Top"/>
+        <Button x:Name="removeAllBtn" Content="移除所有文件" Margin="510,90,40,0" Click="removeAllBtn_Click" Height="30" VerticalAlignment="Top"/>
+        <Button x:Name="openBtn" Content="打开所有文件" Margin="510,130,40,0" Click="openBtn_Click" Height="30" VerticalAlignment="Top"/>
+        <Button x:Name="openInFEBtn" Content="在文件夹中打开" Margin="510,170,40,0" Click="openInFEBtn_Click" Height="30" VerticalAlignment="Top"/>
+        <TextBlock x:Name="logTextBlock" HorizontalAlignment="Left" Margin="510,210,0,20" TextWrapping="Wrap" Width="260"/>
+
+        <!--左侧元素-->
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="33,10,0,0" Text="File List:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <ListView x:Name="listView" Margin="0,30,310,20" SelectionChanged="listView_SelectionChanged" HorizontalAlignment="Right" Width="460">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="FileName" Width="100" DisplayMemberBinding="{Binding fileName}"/>
+                    <GridViewColumn Header="FilePath" Width="360" DisplayMemberBinding="{Binding filePath}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+
+    </Grid>
+</Window>
+
+    
