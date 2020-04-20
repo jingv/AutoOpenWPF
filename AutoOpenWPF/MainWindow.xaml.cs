@@ -121,9 +121,9 @@ namespace AutoOpenWPF
         //删除文件按钮被点击
         private void removeBtn_Click(object sender, RoutedEventArgs e)
         {
-            Button btn = sender as Button;
+            //Button btn = sender as Button;
 
-            MessageBox.Show(btn.DataContext.GetType().ToString());
+            //MessageBox.Show(btn.DataContext.GetType().ToString());
 
         }
 

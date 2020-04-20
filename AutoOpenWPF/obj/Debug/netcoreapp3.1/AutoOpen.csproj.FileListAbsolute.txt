@@ -59,3 +59,5 @@ E:\Other_Code\AutoOpenWPF\AutoOpenWPF\obj\Debug\netcoreapp3.1\AutoOpen.AssemblyI
 E:\Other_Code\AutoOpenWPF\AutoOpenWPF\obj\Debug\netcoreapp3.1\AutoOpen.csproj.CopyComplete
 E:\Other_Code\AutoOpenWPF\AutoOpenWPF\obj\Debug\netcoreapp3.1\AutoOpen.dll
 E:\Other_Code\AutoOpenWPF\AutoOpenWPF\obj\Debug\netcoreapp3.1\AutoOpen.pdb
+E:\Other_Code\AutoOpenWPF\AutoOpenWPF\obj\Debug\netcoreapp3.1\AutoOpen.csproj.CoreCompileInputs.cache
+E:\Other_Code\AutoOpenWPF\AutoOpenWPF\obj\Debug\netcoreapp3.1\AutoOpen.genruntimeconfig.cache

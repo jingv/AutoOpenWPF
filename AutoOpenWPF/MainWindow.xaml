@@ -27,6 +27,13 @@
         <ListView x:Name="listView" Margin="0,30,310,20" SelectionChanged="listView_SelectionChanged" HorizontalAlignment="Right" Width="460">
             <ListView.View>
                 <GridView>
+                    <GridViewColumn>
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <CheckBox />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
                     <GridViewColumn Header="FileName" Width="100" DisplayMemberBinding="{Binding fileName}"/>
                     <GridViewColumn Header="FilePath" Width="360" DisplayMemberBinding="{Binding filePath}"/>
                 </GridView>
