@@ -27,10 +27,17 @@
         <ListView x:Name="listView" Margin="0,30,310,20" SelectionChanged="listView_SelectionChanged" HorizontalAlignment="Right" Width="460">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn>
+                    <GridViewColumn Width="55">
+                        <GridViewColumnHeader>
+                            <ComboBox x:Name="cbx" Width="55" SelectionChanged="cbx_SelectionChanged">
+                                <ComboBoxItem>全选</ComboBoxItem>
+                                <ComboBoxItem>反选</ComboBoxItem>
+                                <ComboBoxItem>不选</ComboBoxItem>
+                            </ComboBox>
+                        </GridViewColumnHeader>
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <CheckBox />
+                                <CheckBox x:Name="SelectClick" IsChecked="{Binding isSelected}" ToolTip="{Binding filePath}" Click="SelectClick_Click"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>

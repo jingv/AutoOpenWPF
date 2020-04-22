@@ -1,6 +1,6 @@
 ﻿using Microsoft.Win32;
 using System;
-//using System.Collections.Generic;
+using System.Collections.Generic;
 //using System.Linq;
 //using System.Text;
 //using System.Threading.Tasks;
@@ -15,6 +15,8 @@ using System.Windows.Controls;
 //using System.Windows.Shapes;
 //using System.Collections.ObjectModel;
 using System.IO;
+using System.Windows.Documents;
+using System.Linq;
 //using ServiceStack.Redis;
 
 namespace AutoOpenWPF
@@ -25,8 +27,7 @@ namespace AutoOpenWPF
     /// 
     public partial class MainWindow : Window
     {
-        //RedisClient redisClient = new RedisClient("127.0.0.1", 6379);
-        //private static ObservableCollection<File> fileList = new ObservableCollection<File>();
+        private static List<AutoOpen.File> fileList = new List<AutoOpen.File>();
         public MainWindow()
         {
             InitializeComponent();
@@ -41,6 +42,8 @@ namespace AutoOpenWPF
             //}
 
             iniApp();
+
+            listView.ItemsSource = fileList;
 
             this.Closing += MainWindow_Closing;
         }
@@ -62,7 +65,8 @@ namespace AutoOpenWPF
                         //可能读到空的字符串
                         string fileName = items[0];
                         string filePath = items[1];
-                        listView.Items.Add(new File(fileName, filePath));
+                        //listView.Items.Add(new File(fileName, filePath));
+                        fileList.Add(new AutoOpen.File(fileName, filePath));
                     }
                     catch
                     {
@@ -84,7 +88,7 @@ namespace AutoOpenWPF
             }        
             //new StreamWriter(@".\Files.txt")
             StreamWriter streamWriter = fileInfo.AppendText();
-            foreach (File file in listView.Items)
+            foreach (AutoOpen.File file in listView.Items)
             {
                 //redisClient.Set<string>(file.filePath, file.fileName);
 
@@ -111,7 +115,7 @@ namespace AutoOpenWPF
                 string filePath = file.FileName;
                 string fileName = file.SafeFileName;
                 //MessageBox.Show(filePath + " - " + fileName);
-                listView.Items.Add(new File(fileName, filePath));
+                listView.Items.Add(new AutoOpen.File(fileName, filePath));
                 //MessageBox.Show($"{filePath} - {fileName}");
 
             }
@@ -131,7 +135,7 @@ namespace AutoOpenWPF
         private void openBtn_Click(object sender, RoutedEventArgs e)
         {
             logTextBlock.Text = "";
-            foreach (File item in listView.Items)
+            foreach (AutoOpen.File item in listView.Items)
             {
                 string fileName = item.fileName;
                 string filePath = item.filePath;
@@ -158,7 +162,7 @@ namespace AutoOpenWPF
         {
             if (listView.SelectedValue != null)
             {
-                File file = listView.SelectedItem as File;
+                AutoOpen.File file = listView.SelectedItem as AutoOpen.File;
                 string fileName = file.fileName;
                 string filePath = file.filePath.Substring(0, file.filePath.LastIndexOf(@"\") + 1);
                 try
@@ -180,31 +184,43 @@ namespace AutoOpenWPF
             listView.Items.Clear();
         }
 
+        private void cbx_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void SelectClick_Click(object sender, RoutedEventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            string filePath = Convert.ToString(checkBox.ToolTip);
+            if(checkBox.IsChecked == true)
+            {
+                if(this.listView.Items != null)
+                {
+                    List<AutoOpen.File> files = this.listView.Items.Cast<AutoOpen.File>().ToList();
+                    AutoOpen.File findFile = files.Where(file => file.filePath == filePath).SingleOrDefault();
+                    if(findFile == null)
+                    {
+                        AutoOpen.File file = fileList.Where(file => file.filePath == filePath).FirstOrDefault();
+                        this.listView.Items.Add(file);
+                    }
+                }
+                else
+                {
+                    AutoOpen.File file = fileList.Where(file => file.filePath == filePath).FirstOrDefault();
+                    this.listView.Items.Add(file);
+                }
+            }
+            else
+            {
+                AutoOpen.File file = fileList.Where(file => file.filePath == filePath).FirstOrDefault();
+                this.listView.Items.Remove(file);
+            }
+        }
+
         //private void tag_Click(object sender, RoutedEventArgs e)
         //{
         //    MessageBox.Show(this.GetType().Name);
         //}
-    }
-
-    class File
-    {
-        private string _fileName;
-        private string _filePath;
-        public string fileName
-        {
-            get { return _fileName; }
-            set { _fileName = value; }
-        }
-
-        public string filePath
-        {
-            get { return _filePath; }
-            set { _filePath = value; }
-        }
-        public File(string fileName, string filePath)
-        {
-            _fileName = fileName;
-            _filePath = filePath;
-        }
     }
 }

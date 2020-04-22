@@ -1,6 +1,5 @@
-PLUSManager.stp~E:\EAP_Dev_ Code\1. New Code\PLUS Application\PLUS Manager\PLUSManager.stp
-PLUSserver.stp~E:\EAP_Dev_ Code\1. New Code\PLUS Application\PLUS Server1\PLUSserver.stp
-PLUSserver.stp~E:\EAP_Dev_ Code\1. New Code\PLUS Application\PLUS Server2\PLUSserver.stp
-EAP.stp~E:\EAP_Dev_ Code\1. New Code\EAP Application\01 Semilab_FAaST230\EAP.stp
-EqpSimulator.stp~E:\EAP_Dev_ Code\1. New Code\EQP Simulator\01 SemiLab_FAaST230\EqpSimulator.stp
-SEMI.OUI.Launcher.exe~E:\EAP_Dev_ Code\1. New Code\EAP OUI\SEMI OUI Solution_PLUS\SEMI.OUI.Launcher\bin\Debug\SEMI.OUI.Launcher.exe
+PLUSManager.stp~E:\EAP_Dev_ Code\Demo_V3.0\PLUS Application\PLUS Manager\PLUSManager.stp
+PLUSserver.stp~E:\EAP_Dev_ Code\Demo_V3.0\PLUS Application\PLUS Server1\PLUSserver.stp
+PLUSserver.stp~E:\EAP_Dev_ Code\Demo_V3.0\PLUS Application\PLUS Server2\PLUSserver.stp
+EqpSimulator.stp~E:\EAP_Dev_ Code\Demo_V3.0\EQP Simulator\KLA_Archer10\EqpSimulator.stp
+EAP.stp~E:\EAP_Dev_ Code\Demo_V3.0\EAP Application\KLA_Archer10\EAP.stp
