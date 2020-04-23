@@ -7,17 +7,12 @@ Using System Tools to Open Some Files
 ### Finished
 
 * CheckBox Function Finished
-
-* Method of Data binding and Store changed 
-
 * Can Add Multi File
 
 ### Problem
 
 * Logical clash: Between CheckBox (in listView) and the listView.SelectedItem in the Function below:
-
     1. 移除文件
-
     2. 打开文件(Function Added in the Future)
 
 ## Data 4.22
