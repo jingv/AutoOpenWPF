@@ -3,3 +3,4 @@ PLUSserver.stp~E:\EAP_Dev_ Code\Demo_V3.0\PLUS Application\PLUS Server1\PLUSserv
 PLUSserver.stp~E:\EAP_Dev_ Code\Demo_V3.0\PLUS Application\PLUS Server2\PLUSserver.stp
 EqpSimulator.stp~E:\EAP_Dev_ Code\Demo_V3.0\EQP Simulator\KLA_Archer10\EqpSimulator.stp
 EAP.stp~E:\EAP_Dev_ Code\Demo_V3.0\EAP Application\KLA_Archer10\EAP.stp
+App.ini~E:\EAP_Dev_ Code\Demo_V3.0\EAP Application\KLA_Archer10\App.ini

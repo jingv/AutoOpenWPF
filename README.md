@@ -2,6 +2,24 @@
 
 Using System Tools to Open Some Files
 
+## Data 4.23
+
+### Finished
+
+* CheckBox Function Finished
+
+* Method of Data binding and Store changed 
+
+* Can Add Multi File
+
+### Problem
+
+* Logical clash: Between CheckBox (in listView) and the listView.SelectedItem in the Function below:
+
+    1. 移除文件
+
+    2. 打开文件(Function Added in the Future)
+
 ## Data 4.22
 
 * Just Add CheckBoxes But There are Some Problems in the Code（MainWindow.xaml.cs => 216）
