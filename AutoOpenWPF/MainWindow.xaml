@@ -22,7 +22,7 @@
         <Button x:Name="openBtn" Content="打开文件" Margin="510,130,40,0" Click="openBtn_Click" Height="30" VerticalAlignment="Top"/>
         <Button x:Name="openAllBtn" Content="打开所有文件" Margin="510,170,40,0" Click="openAllBtn_Click" Height="30" VerticalAlignment="Top"/>
         <Button x:Name="openInFEBtn" Content="在文件夹中打开" Margin="510,210,40,0" Click="openInFEBtn_Click" Height="30" VerticalAlignment="Top"/>
-        <TextBlock x:Name="logTextBlock" HorizontalAlignment="Left" Margin="510,250,0,0" TextWrapping="Wrap" Width="260" VerticalAlignment="Top" Background="Red"/>
+        <TextBlock x:Name="logTextBlock" HorizontalAlignment="Left" Margin="510,250,0,0" TextWrapping="Wrap" Width="260" VerticalAlignment="Top"/>
 
         <!--左侧元素-->
         <ListView x:Name="listView" Margin="10,10,300,20" SelectionChanged="listView_SelectionChanged" HorizontalAlignment="Right">
