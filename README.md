@@ -2,7 +2,7 @@
 
 Using System Tools to Open Some Files
 
-## Data 4.28
+## Date 4.28
 
 ### Done
 * Window Can't Resize
@@ -14,7 +14,7 @@ Using System Tools to Open Some Files
 * Check Box And Select Item Clash
 * Item size is not wonderful
 
-## Data 4.23
+## Date 4.23
 
 ### Done
 
@@ -27,7 +27,7 @@ Using System Tools to Open Some Files
     1. 移除文件
     2. 打开文件(Function Added in the Future)
 
-## Data 4.22
+## Date 4.22
 
 * Just Add CheckBoxes But There are Some Problems in the Code（MainWindow.xaml.cs => 216）
 * Move The Class-File From MainWindow.xaml.cs to File.cs
@@ -38,6 +38,6 @@ Using System Tools to Open Some Files
 
 * 为主界面添加checkbox
 
-## Date4.8
+## Date 4.8
 
 * 一堆乱起八糟的更改，应该是编译文件有关
