@@ -5,6 +5,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 
 namespace AutoOpenWPF
 {
@@ -124,10 +125,44 @@ namespace AutoOpenWPF
             listView.Items.Refresh();
         }
 
-        //打开所有文件按钮被点击
+        //移除所有文件
+        private void removeAllBtn_Click(object sender, RoutedEventArgs e)
+        {
+            //listView.SelectAll();
+            fileList.Clear();
+            listView.Items.Refresh();
+            //listView.Items.Clear();
+        }
+
+        //打开指定文件
         private void openBtn_Click(object sender, RoutedEventArgs e)
         {
-            logTextBlock.Text = "";
+            foreach (AutoOpen.File item in fileList.Where(f => f.isSelected).ToList())
+            {
+                //logTextBlock.Text = "";
+                string filePath = item.filePath;
+                System.Diagnostics.Process process = new System.Diagnostics.Process();
+                System.Diagnostics.ProcessStartInfo processStartInfo = new System.Diagnostics.ProcessStartInfo(filePath);
+                process.StartInfo = processStartInfo;
+                process.StartInfo.Arguments = "";
+                process.StartInfo.UseShellExecute = true;
+                try
+                {
+                    process.Start();
+                    logTextBlock.Text += $"{Path.GetFileName(filePath)} open Success\n";
+                }
+                catch
+                {
+                    logTextBlock.Text += $"{Path.GetFileName(filePath)} open Filed\n";
+                }
+
+            }
+        }
+
+        //打开所有文件按钮被点击
+        private void openAllBtn_Click(object sender, RoutedEventArgs e)
+        {
+            //logTextBlock.Text = "";
             foreach (AutoOpen.File item in listView.Items)
             {
                 string fileName = item.fileName;
@@ -169,15 +204,6 @@ namespace AutoOpenWPF
                 }
             }
 
-        }
-
-        //移除所有文件
-        private void removeAllBtn_Click(object sender, RoutedEventArgs e)
-        {
-            //listView.SelectAll();
-            fileList.Clear();
-            listView.Items.Refresh();
-            //listView.Items.Clear();
         }
 
         //多选框

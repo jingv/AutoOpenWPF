@@ -2,9 +2,21 @@
 
 Using System Tools to Open Some Files
 
+## Data 4.28
+
+### Done
+* Window Can't Resize
+* Item size changed
+* Remove File Completed
+* Open File Completed
+
+### Problem
+* Check Box And Select Item Clash
+* Item size is not wonderful
+
 ## Data 4.23
 
-### Finished
+### Done
 
 * CheckBox Function Finished
 * Can Add Multi File
