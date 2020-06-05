@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "+0UQ0Fyw//z9gD+ckCluykHiMahvZQnnDADtCmPgeJ6h8CzR7A52nfSGcPMjdaKk2655LM6uXs2B4HIo6UuAjg==",
+  "dgSpecHash": "1jmw0k/063OKlY1OvM+uMAGkaAp46dDj8D58l7XuGnxY1yPtrFnoBpWXF4QmzM38ItCsJxE4ISPfEWsHGa1fuA==",
   "success": true,
   "projectFilePath": "E:\\Other_Code\\AutoOpenWPF\\AutoOpenWPF\\AutoOpen.csproj",
   "expectedPackageFiles": [
@@ -87,7 +87,8 @@
     "C:\\Users\\EAP\\.nuget\\packages\\system.threading.overlapped\\4.3.0\\system.threading.overlapped.4.3.0.nupkg.sha512",
     "C:\\Users\\EAP\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
     "C:\\Users\\EAP\\.nuget\\packages\\system.threading.thread\\4.3.0\\system.threading.thread.4.3.0.nupkg.sha512",
-    "C:\\Users\\EAP\\.nuget\\packages\\system.threading.threadpool\\4.3.0\\system.threading.threadpool.4.3.0.nupkg.sha512"
+    "C:\\Users\\EAP\\.nuget\\packages\\system.threading.threadpool\\4.3.0\\system.threading.threadpool.4.3.0.nupkg.sha512",
+    "C:\\Users\\EAP\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
   ],
   "logs": []
 }

@@ -6,6 +6,8 @@ using System.Windows.Controls;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
+using ServiceStack;
+using System.Windows.Media;
 
 namespace AutoOpenWPF
 {
@@ -88,6 +90,14 @@ namespace AutoOpenWPF
         private void listView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             //MessageBox.Show("Here");
+            AutoOpen.File file = listView.SelectedItem as AutoOpen.File;
+            if(file != null)
+            {
+                foreach (AutoOpen.File f in fileList)
+                    f.isSelected = false;
+                file.isSelected = true;
+                listView.Items.Refresh();
+            }
         }
 
         /// <summary>
@@ -188,9 +198,8 @@ namespace AutoOpenWPF
         //在文件夹中打开被点击
         private void openInFEBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (listView.SelectedValue != null)
+            foreach (AutoOpen.File file in fileList.Where(f => f.isSelected).ToList())
             {
-                AutoOpen.File file = listView.SelectedItem as AutoOpen.File;
                 string fileName = file.fileName;
                 string filePath = file.filePath.Substring(0, file.filePath.LastIndexOf(@"\") + 1);
                 try

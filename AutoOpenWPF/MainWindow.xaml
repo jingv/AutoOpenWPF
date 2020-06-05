@@ -5,27 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutoOpenWPF"
         mc:Ignorable="d"
-        Title="AutoOpen" Height="450" Width="800" Icon="icon.png"
-        ResizeMode="NoResize">
-    <Grid HorizontalAlignment="Left" Width="800">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="800*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
+        Title="AutoOpen" Height="450" Width="1010" Icon="icon.png"
+        ResizeMode="CanMinimize">
+    <Grid HorizontalAlignment="Left" Width="1000">
+
         <!--右侧元素-->
-        <Button x:Name="addBtn" Content="添加文件" Margin="510,10,40,0" Height="30" VerticalAlignment="Top" Click="addBtn_Click"/>
-        <Button x:Name="removeBtn" Content="移除文件" Margin="510,50,40,0" Height="30" Click="removeBtn_Click" VerticalAlignment="Top"/>
-        <Button x:Name="removeAllBtn" Content="移除所有文件" Margin="510,90,40,0" Click="removeAllBtn_Click" Height="30" VerticalAlignment="Top"/>
-        <Button x:Name="openBtn" Content="打开文件" Margin="510,130,40,0" Click="openBtn_Click" Height="30" VerticalAlignment="Top"/>
-        <Button x:Name="openAllBtn" Content="打开所有文件" Margin="510,170,40,0" Click="openAllBtn_Click" Height="30" VerticalAlignment="Top"/>
-        <Button x:Name="openInFEBtn" Content="在文件夹中打开" Margin="510,210,40,0" Click="openInFEBtn_Click" Height="30" VerticalAlignment="Top"/>
-        <TextBlock x:Name="logTextBlock" HorizontalAlignment="Left" Margin="510,250,0,0" TextWrapping="Wrap" Width="260" VerticalAlignment="Top"/>
+        <Button x:Name="addBtn" Content="添加文件" Margin="510,10,10,0" Height="30" VerticalAlignment="Top" Click="addBtn_Click"/>
+        <Button x:Name="removeBtn" Content="移除文件" Margin="510,50,260,0" Height="30" Click="removeBtn_Click" VerticalAlignment="Top"/>
+        <Button x:Name="removeAllBtn" Content="移除所有文件" Margin="760,50,10,0" Click="removeAllBtn_Click" Height="30" VerticalAlignment="Top"/>
+        <Button x:Name="openBtn" Content="打开文件" Margin="510,90,260,0" Click="openBtn_Click" Height="30" VerticalAlignment="Top"/>
+        <Button x:Name="openAllBtn" Content="打开所有文件" Margin="760,90,10,0" Click="openAllBtn_Click" Height="30" VerticalAlignment="Top"/>
+        <Button x:Name="openInFEBtn" Content="在文件夹中打开" Margin="510,130,10,0" Click="openInFEBtn_Click" Height="30" VerticalAlignment="Top"/>
+        <TextBlock x:Name="logTextBlock" Margin="510,170,10,20" TextWrapping="Wrap"/>
 
         <!--左侧元素-->
-        <ListView x:Name="listView" Margin="10,10,300,20" SelectionChanged="listView_SelectionChanged" HorizontalAlignment="Right">
+        <ListView x:Name="listView" Margin="10,10,500,20" SelectionChanged="listView_SelectionChanged" HorizontalAlignment="Right">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Width="55">
