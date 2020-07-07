@@ -5,22 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutoOpenWPF"
         mc:Ignorable="d"
-        Title="AutoOpen" Height="450" Width="1010" Icon="icon.png"
+        Title="AutoOpen" Height="450" Width="810" Icon="icon.png"
         ResizeMode="CanMinimize">
-    <Grid HorizontalAlignment="Left" Width="1000">
-        <!--右侧元素-->
-        <Button x:Name="addBtn" Content="添加文件" Margin="510,10,10,0" Height="30" VerticalAlignment="Top" Click="addBtn_Click"/>
-        <Button x:Name="removeBtn" Content="移除文件" Margin="510,50,260,0" Height="30" Click="removeBtn_Click" VerticalAlignment="Top"/>
-        <Button x:Name="removeAllBtn" Content="移除所有文件" Margin="760,50,10,0" Click="removeAllBtn_Click" Height="30" VerticalAlignment="Top"/>
-        <Button x:Name="openBtn" Content="打开文件" Margin="510,90,260,0" Click="openBtn_Click" Height="30" VerticalAlignment="Top"/>
-        <Button x:Name="openAllBtn" Content="打开所有文件" Margin="760,90,10,0" Click="openAllBtn_Click" Height="30" VerticalAlignment="Top"/>
-        <Button x:Name="openInFEBtn" Content="在文件夹中打开" Margin="510,130,10,0" Click="openInFEBtn_Click" Height="30" VerticalAlignment="Top"/>
-        <TextBlock x:Name="logTextBlock" Margin="510,170,10,20" TextWrapping="Wrap"/>
-
-        <!--左侧元素-->
-        <ListView x:Name="listView" Margin="10,10,500,20" SelectionChanged="listView_SelectionChanged" HorizontalAlignment="Right">
+    <Grid HorizontalAlignment="Left" Width="800">
+        <ListView x:Name="listView" Margin="10,10,15,20" SelectionChanged="listView_SelectionChanged">
             <ListView.ContextMenu>
                 <ContextMenu StaysOpen="False">
+                    <MenuItem Header="选中">
+                        <MenuItem Header="全选" Name="selecteAll" Click="selecteAll_Click"/>
+                        <MenuItem Header="反选" Name="reverseSelect" Click="reverseSelect_Click"/>
+                        <MenuItem Header="不选" Name="notSelect" Click="notSelect_Click"/>
+                    </MenuItem>
                     <MenuItem Header="添加文件" Name="addFile" Click="addFile_Click"/>
                     <MenuItem Header="移除文件" Name="removeFile" Click="removeFile_Click"/>
                     <MenuItem Header="移除所有文件" Name="removeAllFile" Click="removeAllFile_Click"/>
@@ -29,30 +24,20 @@
                     <MenuItem Header="在资源管理器中打开" Name="openInExplorer" Click="openInExplorer_Click"/>
                 </ContextMenu>
             </ListView.ContextMenu>
-            
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Width="55">
-                        <GridViewColumnHeader>
-                            <ComboBox x:Name="cbx" Width="55" SelectionChanged="cbx_SelectionChanged">
-                                <ComboBoxItem>全选</ComboBoxItem>
-                                <ComboBoxItem>反选</ComboBoxItem>
-                                <ComboBoxItem>不选</ComboBoxItem>
-                            </ComboBox>
-                        </GridViewColumnHeader>
+                    <GridViewColumn Width="30">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <CheckBox x:Name="SelectClick" IsChecked="{Binding isSelected}" ToolTip="{Binding filePath}" Click="SelectClick_Click"/>
+                                <CheckBox IsChecked="{Binding isSelected}" ToolTip="{Binding filePath}"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                    <GridViewColumn Header="FileName" Width="100" DisplayMemberBinding="{Binding fileName}"/>
-                    <GridViewColumn Header="FilePath" Width="360" DisplayMemberBinding="{Binding filePath}"/>
+                    <GridViewColumn Header="FileName" Width="200" DisplayMemberBinding="{Binding fileName}"/>
+                    <GridViewColumn Header="FilePath" Width="530" DisplayMemberBinding="{Binding filePath}"/>
                 </GridView>
             </ListView.View>
         </ListView>
-
-
     </Grid>
 </Window>
 

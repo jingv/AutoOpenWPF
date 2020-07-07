@@ -6,6 +6,7 @@ Using System Tools to Open Some Files
 
 * Add Mouse_right_click
 * Organize Founction About File IO to FileHandler
+* Remove some old code
 
 ## Data 6.5
 

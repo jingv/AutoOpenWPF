@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Other_Code\\AutoOpenWPF\\AutoOpenWPF\\AutoOpen.csproj": {}
+    "F:\\Codes\\AutoOpenWPF\\AutoOpenWPF\\AutoOpen.csproj": {}
   },
   "projects": {
-    "E:\\Other_Code\\AutoOpenWPF\\AutoOpenWPF\\AutoOpen.csproj": {
+    "F:\\Codes\\AutoOpenWPF\\AutoOpenWPF\\AutoOpen.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Other_Code\\AutoOpenWPF\\AutoOpenWPF\\AutoOpen.csproj",
+        "projectUniqueName": "F:\\Codes\\AutoOpenWPF\\AutoOpenWPF\\AutoOpen.csproj",
         "projectName": "AutoOpen",
-        "projectPath": "E:\\Other_Code\\AutoOpenWPF\\AutoOpenWPF\\AutoOpen.csproj",
-        "packagesPath": "C:\\Users\\EAP\\.nuget\\packages\\",
-        "outputPath": "E:\\Other_Code\\AutoOpenWPF\\AutoOpenWPF\\obj\\",
+        "projectPath": "F:\\Codes\\AutoOpenWPF\\AutoOpenWPF\\AutoOpen.csproj",
+        "packagesPath": "C:\\Users\\JingV\\.nuget\\packages\\",
+        "outputPath": "F:\\Codes\\AutoOpenWPF\\AutoOpenWPF\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\EAP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\JingV\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -57,12 +57,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.2, 3.1.2]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -71,7 +65,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
