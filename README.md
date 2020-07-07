@@ -5,7 +5,7 @@ Using System Tools to Open Some Files
 ## Data 7.7
 
 * Add Mouse_right_click
-* Organize Founction About File IO to FileHandler 
+* Organize Founction About File IO to FileHandler
 
 ## Data 6.5
 
