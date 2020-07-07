@@ -8,7 +8,6 @@
         Title="AutoOpen" Height="450" Width="1010" Icon="icon.png"
         ResizeMode="CanMinimize">
     <Grid HorizontalAlignment="Left" Width="1000">
-
         <!--右侧元素-->
         <Button x:Name="addBtn" Content="添加文件" Margin="510,10,10,0" Height="30" VerticalAlignment="Top" Click="addBtn_Click"/>
         <Button x:Name="removeBtn" Content="移除文件" Margin="510,50,260,0" Height="30" Click="removeBtn_Click" VerticalAlignment="Top"/>
@@ -20,6 +19,17 @@
 
         <!--左侧元素-->
         <ListView x:Name="listView" Margin="10,10,500,20" SelectionChanged="listView_SelectionChanged" HorizontalAlignment="Right">
+            <ListView.ContextMenu>
+                <ContextMenu StaysOpen="False">
+                    <MenuItem Header="添加文件" Name="addFile" Click="addFile_Click"/>
+                    <MenuItem Header="移除文件" Name="removeFile" Click="removeFile_Click"/>
+                    <MenuItem Header="移除所有文件" Name="removeAllFile" Click="removeAllFile_Click"/>
+                    <MenuItem Header="打开文件" Name="openFile" Click="openFile_Click"/>
+                    <MenuItem Header="打开所有文件" Name="openAllFile" Click="openAllFile_Click"/>
+                    <MenuItem Header="在资源管理器中打开" Name="openInExplorer" Click="openInExplorer_Click"/>
+                </ContextMenu>
+            </ListView.ContextMenu>
+            
             <ListView.View>
                 <GridView>
                     <GridViewColumn Width="55">

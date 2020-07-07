@@ -1,3 +1,1 @@
-EqpSimulator.stp~E:\EAP_Developing_Code\EAP_Developing_FAaST230\CODE\EQP Simulator\FAaST230\EqpSimulator.stp
-SEMI.OUI.Launcher.exe~E:\EAP_Developing_Code\EAP_Developing_FAaST230\CODE\EAP OUI\SEMI.OUI.Launcher.exe
-EAP.stp~E:\EAP_Developing_Code\EAP_Developing_FAaST230\CODE\EAP Application\FAaST230\EAP.stp
+EqpSimulator.stp~E:\EAP_Developing_Code\EQP Simulator\KLA_eDR7280\EqpSimulator.stp

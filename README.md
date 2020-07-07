@@ -2,20 +2,28 @@
 
 Using System Tools to Open Some Files
 
+## Data 7.7
+
+* Add Mouse_right_click
+* Organize Founction About File IO to FileHandler 
+
 ## Data 6.5
 
 ### Change
+
 * Change UI, More Ugly
 
 ## Date 4.28
 
 ### Done
+
 * Window Can't Resize
 * Item size changed
 * Remove File Completed
 * Open File Completed
 
 ### Problem
+
 * Check Box And Select Item Clash
 * Item size is not wonderful
 
