@@ -8,6 +8,10 @@ using System.Collections;
 using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.InteropServices;
+using System.Diagnostics.SymbolStore;
+using ServiceStack.Messaging;
+using System.Windows;
 
 namespace AutoOpen
 {
@@ -65,6 +69,51 @@ namespace AutoOpen
                 streamWriter.WriteLine(line);
             }
             streamWriter.Close();
+        }
+
+        /// <summary>
+        /// Determine if the File @ filePath is avaliable
+        /// </summary>
+        /// <param name="filePath">The path of the file</param>
+        /// <returns>true means the file is avaliable; else not.</returns>
+        public static Boolean IsFileAvaliable(string filePath)
+        {
+            Boolean isFileAvaliable = false;
+            // 文件不存在
+            if (!System.IO.File.Exists(filePath))
+            {
+                isFileAvaliable = false;
+            }
+            // 文件存在， 判断文件是否被其他程序使用
+            else
+            {
+                //逻辑：尝试执行打开文件的操作，如果文件已经被其他程序使用，则打开失败，抛出异常，根据异常可以判断文件是否已经被其他程序使用
+                System.IO.FileStream fileStream = null;
+                try
+                {
+                    fileStream = System.IO.File.Open(filePath, System.IO.FileMode.Open, System.IO.FileAccess.ReadWrite, System.IO.FileShare.None);
+                    isFileAvaliable = true;
+                }
+                catch (System.IO.IOException ioEx)
+                {
+                    isFileAvaliable = false;
+                    MessageBox.Show(ioEx.Message);
+                    // throw;
+                }
+                catch(System.Exception ex)
+                {
+                    isFileAvaliable = false;
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    if(fileStream != null)
+                    {
+                        fileStream.Close();
+                    }
+                }
+            }
+            return isFileAvaliable;
         }
     }
 }

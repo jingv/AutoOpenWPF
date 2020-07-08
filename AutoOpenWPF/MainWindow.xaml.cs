@@ -6,7 +6,6 @@ using System.Windows.Controls;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
-using ServiceStack;
 using System.Windows.Media;
 using AutoOpen;
 
@@ -46,14 +45,16 @@ namespace AutoOpenWPF
         /// <param name="e"></param>
         private void listView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+
             AutoOpen.File file = listView.SelectedItem as AutoOpen.File;
-            if(file != null)
+            if (file != null)
             {
                 foreach (AutoOpen.File f in fileList)
                     f.isSelected = false;
                 file.isSelected = true;
                 listView.Items.Refresh();
             }
+
         }
 
         /// <summary>
@@ -158,16 +159,15 @@ namespace AutoOpenWPF
         //右键移除所有文件
         private void removeAllFile_Click(object sender, RoutedEventArgs e)
         {
-            //listView.SelectAll();
             fileList.Clear();
             listView.Items.Refresh();
-            //listView.Items.Clear();
         }
 
         //右键打开所有文件
         private void openAllFile_Click(object sender, RoutedEventArgs e)
         {
-            //logTextBlock.Text = "";
+            
+
             foreach (AutoOpen.File item in listView.Items)
             {
                 string fileName = item.fileName;
@@ -194,6 +194,7 @@ namespace AutoOpenWPF
         {
             foreach (AutoOpen.File file in fileList)
                 file.isSelected = true;
+            listView.Items.Refresh();
         }
 
         //右键反选
@@ -201,6 +202,7 @@ namespace AutoOpenWPF
         {
             foreach (AutoOpen.File file in fileList)
                 file.isSelected = !file.isSelected;
+            listView.Items.Refresh();
         }
 
         //右键不选
@@ -208,6 +210,7 @@ namespace AutoOpenWPF
         {
             foreach (AutoOpen.File file in fileList)
                 file.isSelected = false;
+            listView.Items.Refresh();
         }
 
     }

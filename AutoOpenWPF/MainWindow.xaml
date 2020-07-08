@@ -7,6 +7,13 @@
         mc:Ignorable="d"
         Title="AutoOpen" Height="450" Width="810" Icon="icon.png"
         ResizeMode="CanMinimize">
+    <Window.Resources>
+        <CollectionViewSource x:Key="departMent" Source="{Binding groupName}">
+            <CollectionViewSource.GroupDescriptions>
+                <PropertyGroupDescription PropertyName="groupName" />
+            </CollectionViewSource.GroupDescriptions>
+        </CollectionViewSource>
+    </Window.Resources>
     <Grid HorizontalAlignment="Left" Width="800">
         <ListView x:Name="listView" Margin="10,10,15,20" SelectionChanged="listView_SelectionChanged">
             <ListView.ContextMenu>
@@ -18,9 +25,9 @@
                     </MenuItem>
                     <MenuItem Header="添加文件" Name="addFile" Click="addFile_Click"/>
                     <MenuItem Header="移除文件" Name="removeFile" Click="removeFile_Click"/>
-                    <MenuItem Header="移除所有文件" Name="removeAllFile" Click="removeAllFile_Click"/>
                     <MenuItem Header="打开文件" Name="openFile" Click="openFile_Click"/>
                     <MenuItem Header="打开所有文件" Name="openAllFile" Click="openAllFile_Click"/>
+                    <MenuItem Header="移除所有文件" Name="removeAllFile" Click="removeAllFile_Click"/>
                     <MenuItem Header="在资源管理器中打开" Name="openInExplorer" Click="openInExplorer_Click"/>
                 </ContextMenu>
             </ListView.ContextMenu>
@@ -39,6 +46,9 @@
             </ListView.View>
         </ListView>
     </Grid>
+
+    
+    
 </Window>
 
     

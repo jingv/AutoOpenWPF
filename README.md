@@ -2,10 +2,22 @@
 
 Using System Tools to Open Some Files
 
+## data 7.8
+
+### Done
+
+* ChangeUI. Logic Change to Mouse Right Click
+* Add Class IniFileHandler.cs
+
+### Next
+
+* Add Definition Group
+* The File save infos of files to be opened, Change From Files.txt to Files.ini  
+
 ## Data 7.7
 
 * Add Mouse_right_click
-* Organize Founction About File IO to FileHandler
+* Organize Function About File IO to FileHandler
 * Remove some old code
 
 ## Data 6.5
