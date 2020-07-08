@@ -2,6 +2,8 @@
 
 Using System Tools to Open Some Files
 
+***
+
 ## data 7.8
 
 ### Done
@@ -12,7 +14,9 @@ Using System Tools to Open Some Files
 ### Next
 
 * Add Definition Group
-* The File save infos of files to be opened, Change From Files.txt to Files.ini  
+* The File save infos of files to be opened, Change From Files.txt to Files.ini
+
+***
 
 ## Data 7.7
 
