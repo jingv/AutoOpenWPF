@@ -1,2 +1,5 @@
-EqpSim_FB.sts~E:\EAP_Developing_Code\EQP Simulator\KLA_eDR7280\EqpSim_FB.sts
+SEMI.OUI.Launcher.exe~E:\EAP_Developed_ Code\EAP OUI\SEMI.OUI.Launcher.exe
+EAP.stp~E:\EAP_Developing_Code\EAP Application\KLA_eDR7280\EAP.stp
 EqpSimulator.stp~E:\EAP_Developing_Code\EQP Simulator\KLA_eDR7280\EqpSimulator.stp
+eDR 9.1.pdf~E:\EAP_Developing_Code\EAP Application\DOC\KLA_eDR7280\eDR 9.1.pdf
+EAP.stp~E:\EAP OffLineTest\EAP Application\Semilab_IR2500N\EAP.stp

@@ -148,7 +148,10 @@ namespace AutoOpenWPF
                 {
                     // fileList中已经存在当前要添加的file；直接跳过
                     if (fileList.Where(f => f.filePath == filePath).ToList().Count != 0)
+                    {
+                        MessageBox.Show("This File is Already exits in FileList!");
                         continue;
+                    }
                     string fileName = Path.GetFileName(filePath);
                     fileList.Add(new AutoOpen.File(fileName, filePath));
                 }
